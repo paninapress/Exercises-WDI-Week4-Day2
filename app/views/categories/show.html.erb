@@ -2,9 +2,11 @@
 displays: one category with it's products -->
 
 <h1><%= @category.name %></h1>
-<p>Products in this category:</p>
+<h4>Products in this category:</h4>
 <ul>
 <% @products.each do |product| %>
 	<li> <%= link_to product.name, product_path(product.id) %> </li>
 <% end %>
 </ul>
+
+<h4>Edit: <%= link_to @category.name, edit_category_path %></h4>
