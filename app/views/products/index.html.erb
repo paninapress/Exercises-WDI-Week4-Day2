@@ -1,6 +1,9 @@
-<!-- HOMEPAGE
-displays
-	links to product views
-	links to category views -->
+<!-- PRODUCTS PAGE
+display: products -->
 
-<h1>Welcome to the store administrative interface!</h1>
+<h1>Products List</h1>
+<ul>
+<% @products.each do |product| %>
+	<li><%=  product.name %></li>
+<% end %>
+</ul>
