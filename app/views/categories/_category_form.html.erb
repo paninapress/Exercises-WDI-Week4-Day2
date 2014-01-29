@@ -2,8 +2,9 @@
 
 <%= form_for(@category) do |f| %>
 	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= f.text_field :name %><br>
+	<%= f.label "Choose products:" %> <br>
 	<%= collection_check_boxes :category, :product_ids, Product.all, :id, :name %>
-	
+	<br>
 	<%= f.submit %>
 <% end %>
