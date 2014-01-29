@@ -3,7 +3,7 @@ products << Product.create(name: "HALO: Combat Evolved", price: 29.99, descripti
 products << Product.create(name: "iPod", price: 199.99, description: "Music player")
 products << Product.create(name: "Toshiba Windows 8 Laptop", price: 499.99, description: "Le computer")
 products << Product.create(name: "Watch", price: 49.99, description: "Clock-bracelet!")
-products << Product.create(name: "Necklace", price: 999.99, description: "Peals")
+products << Product.create(name: "Necklace", price: 999.99, description: "Pearls")
 products << Product.create(name: "Earings", price: 1.00, description: "for your earlobes")
 products << Product.create(name: "Cutlery Set", price: 60.00, description: "sharp and pointy")
 products << Product.create(name: "Plates", price: 20.99, description: "dishware")
