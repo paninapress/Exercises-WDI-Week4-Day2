@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140129004809) do
+ActiveRecord::Schema.define(version: 20140129021604) do
 
   create_table "associations", force: true do |t|
     t.datetime "created_at"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140129004809) do
   add_index "associations", ["product_id"], name: "index_associations_on_product_id"
 
   create_table "categories", force: true do |t|
-    t.string   "type"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
