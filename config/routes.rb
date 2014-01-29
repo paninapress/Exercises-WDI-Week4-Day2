@@ -3,7 +3,6 @@ Store::Application.routes.draw do
   root 'sites#index'
 
   #products controller
-
     get '/products', to: 'products#index', as: 'products'
     
     get '/products/new', to: 'products#new', as: :new_product
@@ -18,7 +17,17 @@ Store::Application.routes.draw do
 
 
   #categories controller
+    get '/categories', to: 'categories#index', as: 'categories'
+    
+    get '/categories/new', to: 'categories#new', as: :new_category
 
+    get '/categories/:id', to: 'categories#show', as: :category
+
+    get '/categories/:id/edit', to: 'categories#edit', as: :edit_category
+
+    post '/categories', to: 'categories#create'
+
+    patch '/categories/:id', to: 'categories#update'
 end
 #  Prefix Verb   URI Pattern               Controller#Action
 #     sites GET    /sites(.:format)          sites#index
