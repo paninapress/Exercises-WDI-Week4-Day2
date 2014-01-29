@@ -3,7 +3,10 @@ displays: one product with it's categories -->
 
 <h1><%= @product.name %></h1>
 
-<p><%= @product.description %></p>
+<p>Description: <%= @product.description %></p>
+<p>Categories:</p>
+<ul>
 <% @categories.each do |category| %>
-	<%= category.name %>
+	<li><%= link_to category.name, category_path(category.id) %> </li>
 <% end %>
+</ul>
