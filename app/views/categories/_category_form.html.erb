@@ -3,6 +3,7 @@
 <%= form_for(@category) do |f| %>
 	<%= f.label :name %>
 	<%= f.text_field :name %>
+	<%= collection_check_boxes :category, :product_ids, Product.all, :id, :name %>
 	
 	<%= f.submit %>
 <% end %>
