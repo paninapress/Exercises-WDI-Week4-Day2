@@ -2,6 +2,8 @@
 displays: one product with it's categories -->
 
 <h1><%= @product.name %></h1>
+
+<p><%= @product.description %></p>
 <% @categories.each do |category| %>
 	<%= category.name %>
 <% end %>

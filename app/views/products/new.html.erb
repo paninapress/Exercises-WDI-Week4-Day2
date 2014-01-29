@@ -3,16 +3,7 @@ displays: new product form -->
 
 <h1>SUBMIT NEW PRODUCT</h1>
 
-<%= form_for(@product) do |f| %>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
-	<%= f.label :price %>
-	<%= f.text_field :price %>
-	<%= f.label :description %>
-	<%= f.text_field :description %>
-	
-	<%= f.submit %>
-<% end %>
+<%= render "product_form" %>
 
 
 

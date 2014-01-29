@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
 
 	def create
 		product = Product.create(name: params["product"]["name"], price: params["product"]["price"], description: params["product"]["description"])
-		redirect_to product_path(product)
+		redirect_to product
 	end
 
 	def show
@@ -18,8 +18,13 @@ class ProductsController < ApplicationController
 	end
 
 	def edit
+		@product = Product.find(params[:id])
 	end
 
 	def update
+		product = Product.find(params[:id])
+		updated_info = params.require(:product).permit(:name, :price, :description)
+		product.update_attributes(updated_info)
+		redirect_to product
 	end
 end
