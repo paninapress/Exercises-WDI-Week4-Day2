@@ -4,6 +4,12 @@ class ProductsController < ApplicationController
 	end
 
 	def new
+		@product = Product.new
+	end
+
+	def create
+		product = Product.create(name: params["product"]["name"], price: params["product"]["price"], description: params["product"]["description"])
+		redirect_to product_path(product)
 	end
 
 	def show
