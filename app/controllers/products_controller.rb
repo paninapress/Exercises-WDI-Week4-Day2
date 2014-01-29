@@ -13,6 +13,8 @@ class ProductsController < ApplicationController
 	end
 
 	def show
+		@product = Product.find(params[:id])
+		@categories = @product.categories
 	end
 
 	def edit

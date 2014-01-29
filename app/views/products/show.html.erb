@@ -1,2 +1,7 @@
-SHOW PRODUCT PAGE
-displays: one product with it's categories
+<!-- SHOW PRODUCT PAGE
+displays: one product with it's categories -->
+
+<h1><%= @product.name %></h1>
+<% @categories.each do |category| %>
+	<%= category.name %>
+<% end %>
